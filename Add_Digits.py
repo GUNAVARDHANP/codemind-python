@@ -1,15 +1,11 @@
-def solve(n):
-    sum=0
+def dig(n):
     temp=n
+    rev=0
     while temp:
-        sum=sum+temp%10
+        rev=rev+(temp%10)
         temp//=10
-    return sum
+    return rev
 n=int(input())
-res=solve(n)
-while 1:
-    if res<10:
-        print(res)
-        break
-    else:
-        res=solve(res)
+while n>9:
+    n=dig(n)
+print(n)
