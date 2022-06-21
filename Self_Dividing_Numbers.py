@@ -1,21 +1,27 @@
 def selfd(n):
-    temp=n
-    d=0
-    pd=0
-    while n:
-        dev=n%10
-        if dev==0:
-            return False
-        elif temp%dev==0:
-            d+=1
-        pd+=1
-        n//=10
-    if d==pd:
+    if n<10:
         return True
     else:
-        return False
-a=int(input())
-b=int(input())
-for i in range(a,b+1):
-    if selfd(i):
-        print(i,end=' ')
+        c=0
+        pc=0
+        temp=n
+        while temp:
+            d=temp%10
+            if d==0:
+                return False
+            elif n%d!=0:
+                return False
+            else:
+                c+=1
+            pc+=1
+            temp//=10
+        if c==pc:
+            return True
+        else:
+            return False
+n=int(input())
+m=int(input())
+while n<=m:
+    if selfd(n):
+        print(n,end=' ')
+    n+=1
