@@ -1,19 +1,16 @@
-def prime(psum):
-    if psum==0 or psum==1:
+def prime(n):
+    if n<2:
         return False
     else:
-        for i in range(2,int(psum**0.5)+1):
-            if psum%i==0:
+        for i in range(2,int(n**0.5)+1):
+            if n%i==0:
                 return False
         else:
             return True
-a=int(input())
-b=int(input())
-sum=a+b
-psum=sum+1
-while (1):
-    if prime(psum):
-        print(psum-sum)
-        break
-    else:
-        psum=psum+1
+n=int(input())
+m=int(input())
+s1=n+m
+s=n+m+1
+while prime(s)==False:
+    s+=1
+print(s-s1)
