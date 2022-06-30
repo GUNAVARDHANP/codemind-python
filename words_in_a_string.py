@@ -1,3 +1,6 @@
-a=input()
-m=a.split()
-print(len(m))
+n=input()
+c=0
+for i in range(len(n)):
+    if(n[i]==' '):
+        c+=1
+print(c+1)
