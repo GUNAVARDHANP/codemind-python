@@ -1,5 +1,4 @@
-a=input()
-m=a.split()
-for i in range(len(m)):
-    m[i]=(m[i][::-1])
-    print(m[i],end=' ')
+s=input()
+x=s.split(' ')
+y=' '.join(reversed(x))
+print(y[::-1])
