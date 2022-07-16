@@ -1,15 +1,10 @@
-n=input()
-x=[]
-c=0
-l=['a','e','i','o','u']
-for i in n:
-    if i in l:
-        x.append(i)
-for i in l:
-    if i not in x:
-        print(i,end=' ')
-    else:
-        # print('0')
-        c+=1
-if c==len(l):
-    print('0')
+a=input()
+l=[]
+for i in 'aeiou':
+    if i not in a and i not in l:
+        l.append(i)
+l=sorted(l)
+if len(l)==0:
+    print(0)
+else:
+    print(*l)
