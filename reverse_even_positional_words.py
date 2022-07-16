@@ -1,5 +1,4 @@
 a=input().split()
-for i in range(len(a)):
-    if i%2==0:
-        a[i]=a[i][::-1]
-print(*a)
+for i in range(0,len(a),2):
+    a[i]=a[i][::-1]
+print(' '.join(a))
