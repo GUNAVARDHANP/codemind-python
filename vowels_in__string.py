@@ -1,12 +1,11 @@
-string=input()
+a=input()
 l=[]
-res=[]
-vowels=set("aeiouAEIOU")
-for i in range(0,len(string)):
-    if string[i] in vowels:
-       l.append(string[i])
-res = []
-for i in l:
-    if i not in res:
-        res.append(i)
-print(*res)
+c=0
+for i in a:
+    if i in 'AEIOUaeiou' and i not in l:
+        l.append(i)
+        c+=1
+if c==0:
+    print(-1)
+else:
+    print(*l)
