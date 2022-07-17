@@ -1,7 +1,2 @@
 n=int(input())
-arr=list(map(int,input().split()))
-b=list(set(arr))
-sum=0
-for i in b:
-    sum=sum+i
-print(sum)
+print(sum(list(set(list(map(int,input().split()))))))
