@@ -1,9 +1,10 @@
 n=int(input())
-l=list(map(int,input().split()))
-max=0
-for i in range(len(l)):
-    if(len(str(l[i]))>max):
-        max=len(str(l[i]))
-for i in range(len(l)):
-    if(max==len(str(l[i]))):
-        print(l[i],end=" ")
+l=list(map(str,input().split()))
+a=[]
+b=[]
+for i in l:
+    a.append(len(i))
+for i in range(n):
+    if a[i]==max(a):
+        b.append(l[i])
+print(*b)
