@@ -1,12 +1,9 @@
-n=input()
-a=set('aeiouAEIOU')
-c=0
+a=input().lower()
 l=[]
-for i in n.split():
+for i in a.split():
     c=0
-    x=list(i)
-    for j in x:
-        if j in a:
+    for j in i:
+        if j in 'aeiou':
             c+=1
     l.append(c)
 print(max(l))
