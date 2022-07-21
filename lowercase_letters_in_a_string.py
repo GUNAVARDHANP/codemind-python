@@ -1,7 +1,5 @@
-n=input()
 c=0
-x=set("aqwsedzxcfrtgvbhyujnmkiolp")
-for i in n:
-    if i in x:
+for i in input():
+    if i.islower():
         c+=1
 print(c)
