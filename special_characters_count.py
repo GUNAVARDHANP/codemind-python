@@ -1,8 +1,5 @@
-n=input()
-l=[]
 c=0
-x=set("!@#$%^&*()_+~`=-<>?''/.,;\|[]{}")
-for i in n:
-    if i in x:
+for i in input():
+    if i.isalpha()==False and i!=' ':
         c+=1
 print(c)
