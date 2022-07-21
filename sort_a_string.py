@@ -1,14 +1,14 @@
 a=list(input())
+l=[]
 c=[]
 d=[]
-r=[]
 for i in range(len(a)):
-    if a[i].isalpha()==False:
+    if a[i].isalnum():
+        l.append(a[i])
+    else:
         c.append(i)
         d.append(a[i])
-    else:
-        r.append(a[i])
-r=sorted(r)
+l=sorted(l)
 for i in range(len(c)):
-    r.insert(c[i],d[i])
-print(''.join(r))
+    l.insert(c[i],d[i])
+print(''.join(l))
