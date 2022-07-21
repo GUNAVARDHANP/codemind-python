@@ -1,6 +1,6 @@
 a=input().lower()
-s=''
+l=[]
 for i in a:
-    if i!=' ' and a.count(i)==1:
-        s+=i
-print(''.join(sorted(s)))
+    if i!=' ' and i not in l:
+        l.append(i)
+print(''.join(sorted(l)))
